@@ -1,5 +1,7 @@
 '''
-Escreva uma classe “Lampada” as quais suas características referem-se à uma lâmpada um modelo de um supermercado. Após, crie uma classe “TestaLampada” onde os atributos são inicializados e mostrados na tela. Desenvolva os métodos para ligar e desligar a lâmpada
+Escreva uma classe “Lampada” as quais suas características referem-se à
+- um modelo
+- um supermercado.
 '''
 
 class Lampada:
@@ -10,6 +12,11 @@ class Lampada:
 
     def list_att(self):
         return [self.modelo,self.mercado]
+'''
+Após, crie uma classe “TestaLampada”
+- onde os atributos são inicializados e mostrados na tela.
+- desenvolva os métodos para ligar e desligar a lâmpada
+'''
 
 class Testa_Lampada:
     def __init__(self, Lampada):

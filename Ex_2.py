@@ -6,6 +6,17 @@ Crie uma classe “ContaCorrente” que possui:
 - um limite.
 """
 
+"""
+Após, crie uma classe “TestaContaCorrente” onde:
+- Os atributos são inicializados e mostrados na tela.
+- Desenvolva métodos para realizar:
+	- saque (verificando se o cliente possui as condições necessárias)
+	- depositar
+	- consultar saldo
+[warning] não foi definida a regra
+	- verificar o uso do cheque especial (ou não)
+"""
+
 
 def fn_check_status(status):
     dict_status = {"especial": 1, "comum": 1}
@@ -28,18 +39,6 @@ class cls_Conta_Corrente:
         self.saldo = saldo
         self.status = fn_check_status(status)
         self.limite = fn_check_gte_0(limite)
-
-
-"""
-Após, crie uma classe “TestaContaCorrente” onde:
-- Os atributos são inicializados e mostrados na tela.
-- Desenvolva métodos para realizar:
-	- saque (verificando se o cliente possui as condições necessárias)
-	- depositar
-	- consultar saldo
-	# [warning] não foi definida a regra
-	- verificar o uso do cheque especial (ou não)
-"""
 
 
 class cls_Testa_Conta_Corrente:

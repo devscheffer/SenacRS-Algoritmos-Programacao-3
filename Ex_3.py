@@ -1,4 +1,4 @@
-'''
+"""
 Escreva uma classe Aluno com os atributos relacionados às principais características de um aluno
 - nome
 - matrícula
@@ -6,7 +6,7 @@ Escreva uma classe Aluno com os atributos relacionados às principais caracterí
 - média desse aluno.
 Desenvolva os seguintes métodos:
 - verificar se o aluno está aprovado (média maior ou igual a 7).
-'''
+"""
 
 
 class cls_Aluno:
@@ -18,7 +18,7 @@ class cls_Aluno:
 
     def mtd_check_is_approved(self):
         if self.media >= 7:
-            self.status = 'aprovado'
+            self.status = "aprovado"
         else:
-            self.status = 'reprovado'
-        print(f'Aluno foi {self.status} na matéria')
+            self.status = "reprovado"
+        print(f"Aluno foi {self.status} na matéria")

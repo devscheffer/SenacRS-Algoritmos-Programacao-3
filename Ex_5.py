@@ -17,22 +17,22 @@ usando os métodos do objeto criado
 
 
 class cls_Quadrado:
-	def __init__(self, size_lado):
-		self.size_lado = size_lado
+    def __init__(self, size_lado):
+        self.size_lado = size_lado
 
-	def mtd_area(self):
-		print(f"Area: {self.size_lado**2:.2f}")
+    def mtd_area(self):
+        print(f"Area: {self.size_lado**2:.2f}")
 
-	def mtd_perimetro(self):
-		print(f"Perimetro: {self.size_lado*4:.2f}")
+    def mtd_perimetro(self):
+        print(f"Perimetro: {self.size_lado*4:.2f}")
 
-	def mtd_diagonal(self):
-		from math import sqrt
+    def mtd_diagonal(self):
+        from math import sqrt
 
-		print(f"Diagonal: {self.size_lado*sqrt(2):.2f}")
+        print(f"Diagonal: {self.size_lado*sqrt(2):.2f}")
 
-	def mtd_info(self):
-		print(f"Lado: {self.size_lado:.2f}")
-		self.mtd_area()
-		self.mtd_perimetro()
-		self.mtd_diagonal()
+    def mtd_info(self):
+        print(f"Lado: {self.size_lado:.2f}")
+        self.mtd_area()
+        self.mtd_perimetro()
+        self.mtd_diagonal()

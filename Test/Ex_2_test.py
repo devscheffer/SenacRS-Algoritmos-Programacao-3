@@ -1,6 +1,15 @@
-from ..Main.Ex_2 import cls_Conta_Corrente, cls_Testa_Conta_Corrente
+from main.Ex_2 import cls_Conta_Corrente, cls_Testa_Conta_Corrente
 
-a = cls_Testa_Conta_Corrente(cls_Conta_Corrente(1, 10, "especial", 200))
-a.mtd_saque(5)
-a.mtd_depositar(70)
-a.mtd_saldo()
+def test_cls():
+	res = cls_Testa_Conta_Corrente(cls_Conta_Corrente(1, 10, "especial", 200))
+	assert res.conta.saldo == 10
+
+def test_saque():
+	res = cls_Testa_Conta_Corrente(cls_Conta_Corrente(1, 10, "especial", 200))
+	res.mtd_saque(5)
+	assert res.conta.saldo == 5
+
+def test_deposito():
+	res = cls_Testa_Conta_Corrente(cls_Conta_Corrente(1, 10, "especial", 200))
+	res.mtd_depositar(70)
+	assert res.conta.saldo == 80

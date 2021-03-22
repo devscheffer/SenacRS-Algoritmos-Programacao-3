@@ -22,9 +22,9 @@ class cls_circulo:
     def mtd_Calcular_Area_Circulo(self):
         from math import pi
 
-        area = (self.raio) ** 2 * pi
+        self.area = (self.raio) ** 2 * pi
         print(f"Raio:{self.raio:.2f}")
-        print(f"Area:{area:.2f}")
+        print(f"Area:{self.area:.2f}")
 
 
 class cls_Testa_Circulo:

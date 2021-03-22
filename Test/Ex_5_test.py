@@ -1,4 +1,14 @@
-from ..Main.Ex_5 import cls_Quadrado
+from main.Ex_5 import cls_Quadrado
 
-a = cls_Quadrado(1)
-a.mtd_info()
+def test_area():
+	a=1
+	res = cls_Quadrado(a)
+	assert res.mtd_area() == 1
+def test_perimetro():
+	a=1
+	res = cls_Quadrado(a)
+	assert res.mtd_perimetro() == 4
+def test_diagonal():
+	a=1
+	res = cls_Quadrado(a)
+	assert round(res.mtd_diagonal(),2) == 1.41

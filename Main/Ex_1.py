@@ -11,10 +11,10 @@ Após, crie uma classe “TestaLampada”
 
 
 class cls_Lampada:
-    def __init__(self, modelo, mercado):
+    def __init__(self, modelo, mercado,status="desligado"):
         self.modelo = modelo
         self.mercado = mercado
-        self.status = "desligado"
+        self.status = status
 
 
 class cls_Testa_Lampada:

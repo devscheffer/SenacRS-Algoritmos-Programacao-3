@@ -17,3 +17,6 @@ def test_off():
     res.mtd_switch()
     res.mtd_switch()
     assert res.status == "desligado"
+
+print(1)
+print(12)

@@ -12,15 +12,15 @@ class cls_data:
 			return fn_check_ano(self)
 
 	def fn_check_mes(self):
-		if int(mes) in range(1,13):
-			return mes
+		if int(self.mes) in range(1,13):
+			return self.mes
 		else:
 			self.mes=input('Tente novamente o mes')
 			return fn_check_mes(self)
 
 	def fn_check_dia(self):
-		if int(dia) in range(1,31):
-			return dia
+		if int(self.dia) in range(1,31):
+			return self.dia
 		else:
 			self.dia=input('Tente novamente o dia')
 			return fn_check_dia(self)

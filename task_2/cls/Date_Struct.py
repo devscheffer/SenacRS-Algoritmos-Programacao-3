@@ -37,3 +37,14 @@ class cls_Date_Struct:
 		ano_new=fn_check_ano(value)
 		self.__ano=ano_new
 
+
+	def mtd_Inicializar_Data(self)->str:
+		print(f'Ano: {self.ano}')
+		print(f'Mes: {self.mes}')
+		print(f'Dia: {self.dia}')
+		data = f'{self.ano:04d}{self.mes:02d}{self.dia:02d}'
+		data = int(data)
+		print(data)
+		return data
+
+

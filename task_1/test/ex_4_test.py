@@ -1,4 +1,4 @@
-from main.Ex_4 import cls_Testa_Circulo,cls_circulo
+from task_1.main.ex_4 import cls_Testa_Circulo,cls_circulo
 
 
 

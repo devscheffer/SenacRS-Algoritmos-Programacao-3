@@ -1,5 +1,4 @@
-from main.Ex_1 import cls_Lampada, cls_Testa_Lampada
-
+from task_1.main.ex_1 import cls_Lampada, cls_Testa_Lampada
 
 def test_cls():
     res = cls_Testa_Lampada(cls_Lampada("teste", "big"))
@@ -18,5 +17,4 @@ def test_off():
     res.mtd_switch()
     assert res.status == "desligado"
 
-print(1)
-print(12)
+print('ok')

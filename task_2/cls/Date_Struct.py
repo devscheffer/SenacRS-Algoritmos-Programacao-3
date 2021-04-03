@@ -2,7 +2,7 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.fn.fn_aux import fn_check_ano, fn_check_mes, fn_check_dia
+from task_2.fn.fn_aux import fn_check_ano, fn_check_mes, fn_check_dia, fn_mes_int_to_str
 
 class cls_Date_Struct:
 	def __init__(self, dia: int=0, mes: int=0, ano: int=0):
@@ -64,21 +64,8 @@ class cls_Date_Struct:
 		self.ano = self.ano+ano
 
 	def mtd_Escrever_Extenso(self):
-		dct_mes = {
-			1:'janeiro'
-			,2:'fevereiro'
-			,3:'março'
-			,4:'abril'
-			,5:'maio'
-			,6:'junho'
-			,7:'julho'
-			,8:'agosto'
-			,9:'outubro'
-			,10:'novembro'
-			,11:'setembro'
-			,12:'dezembro'
-		}
-		data_extenso = f'{self.dia} de {dct_mes[self.mes].capitalize()} de {self.ano}'
+		mes_name=fn_mes_int_to_str(self.mes)
+		data_extenso = f'{self.dia} de {mes_name.capitalize()} de {self.ano}'
 		return data_extenso
 
 

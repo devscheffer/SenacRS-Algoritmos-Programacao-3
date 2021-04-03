@@ -1,5 +1,5 @@
 {
-	"python.linting.flake8Enabled": true,
+	"python.linting.flake8Enabled": false,
 	"python.linting.enabled": true,
 	"python.testing.pytestArgs": [
 		"task_2"
@@ -14,5 +14,6 @@
 		"-p",
 		"*_test.py"
 	],
-	"python.linting.banditEnabled": false
+	"python.linting.banditEnabled": true,
+	"python.linting.pylamaEnabled": false
 }

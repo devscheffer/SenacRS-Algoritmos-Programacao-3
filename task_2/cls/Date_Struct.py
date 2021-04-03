@@ -5,7 +5,7 @@ path.append(cwd)
 from task_2.fn.fn_aux import fn_check_ano, fn_check_mes, fn_check_dia
 
 class cls_Date_Struct:
-	def __init__(self, dia: int, mes: int, ano: int):
+	def __init__(self, dia: int=0, mes: int=0, ano: int=0):
 		self.ano = ano
 		self.mes = mes
 		self.dia = dia

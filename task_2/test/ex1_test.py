@@ -1,10 +1,10 @@
+from os import getcwd
+from sys import path
+cwd = getcwd()
+path.append(cwd)
+
 from task_2.cls.Date_Struct import cls_Date_Struct
 import pytest
-import os
-import sys
-cwd = os.getcwd()
-sys.path.append(cwd)
-
 
 class Test_cls_init:
 	def test_class_ini(self):
@@ -52,3 +52,10 @@ class Test_mtd_Acrescentar_Dias:
 		assert res.ano == 1110
 		assert res.mes == 11
 		assert res.dia == 23
+		assert res.data == 11101123
+
+class Test_mtd_Escrever_Extenso:
+	def test_data_extenso(self):
+		res=cls_Date_Struct(10,3,2020)
+		assert res.data_extenso == '10 de Março de 2020'
+

@@ -4,7 +4,7 @@ cwd = getcwd()
 path.append(cwd)
 
 from task_2.cls.Date_Struct import cls_Date_Struct
-from task_2.fn.fn_aux import fn_check_ano
+from task_2.fn.fn_aux import fn_check_ano, fn_leap
 class cls_Controller:
 	def __init__(self):
 		self.obj_data=cls_Date_Struct()
@@ -17,9 +17,7 @@ class cls_Controller:
 		self.obj_data.dia=lst_data[2]
 
 	def mtd_Verificar_Bissexto(self)->int:
-		ano=self.obj_data.ano
-		res = ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0)
-		return int(res)
+		return fn_leap(self.ano)
 
 	def mtd_Pascoa(self,ano)->str:
 		ano=str(ano).split('-')[0]

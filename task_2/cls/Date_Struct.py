@@ -2,7 +2,7 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.fn.fn_aux import fn_check_ano, fn_check_mes, fn_check_dia, fn_mes_int_to_str
+from task_2.fn.fn_aux import fn_date_add, fn_check_ano, fn_check_mes, fn_check_dia, fn_dias_ano, fn_dias_mes, fn_mes_int_to_str
 
 class cls_Date_Struct:
 	def __init__(self, dia: int=0, mes: int=0, ano: int=0):
@@ -55,13 +55,13 @@ class cls_Date_Struct:
 		return data
 
 	def mtd_Acrescentar_Dias(self, value: int):
-		ano_dias = 31*12
-		dia = (value % ano_dias) % 31
-		mes = (value % ano_dias)//31
-		ano = value//ano_dias
-		self.dia = self.dia+dia
-		self.mes = self.mes+mes
-		self.ano = self.ano+ano
+		add_mes_dia = fn_date_add(value,self.ano)
+		mes = add_mes_dia[0]
+		dia=add_mes_dia[1]
+		ano = add_mes_dia[2]
+		self.dia = dia
+		self.mes = mes
+		self.ano = ano
 
 	def mtd_Escrever_Extenso(self):
 		mes_name=fn_mes_int_to_str(self.mes)

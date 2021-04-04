@@ -43,16 +43,16 @@ class Test_mtd_Acrescentar_Dias:
 		res = cls_Date_Struct(1, 1, 1111)
 		res.mtd_Acrescentar_Dias(400)
 		assert res.ano == 1112
-		assert res.mes == 1
-		assert res.dia == 29
+		assert res.mes == 2
+		assert res.dia == 5
 
 	def test_add_negative(self):
-		res = cls_Date_Struct(1, 1, 1111)
-		res.mtd_Acrescentar_Dias(-40)
+		res = cls_Date_Struct(1, 1, 2020)
+		res.mtd_Acrescentar_Dias(-1)
 		assert res.ano == 1110
 		assert res.mes == 11
-		assert res.dia == 23
-		assert res.data == 11101123
+		assert res.dia == 22
+		assert res.data == 11101122
 
 class Test_mtd_Escrever_Extenso:
 	def test_data_extenso(self):

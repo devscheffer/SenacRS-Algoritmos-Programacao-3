@@ -3,6 +3,7 @@ from sys import path
 cwd = getcwd()
 path.append(cwd)
 
+from task_2.fn.Auxiliar import fn_check_day, fn_check_month, fn_check_year
 
 class cls_Date_Struct:
 	def __init__(self
@@ -20,11 +21,7 @@ class cls_Date_Struct:
 
 	@year.setter
 	def year(self, year: int) -> int:
-		if len(str(year)) == 4 or year == -999:
-			print(f"year {year}")
-			self.__year = year
-		else:
-			raise ValueError('Valor {year} incorreto para o ano')
+		self.__year = fn_check_year(year)
 
 	@property
 	def month(self):
@@ -32,11 +29,8 @@ class cls_Date_Struct:
 
 	@month.setter
 	def month(self, month: int) -> int:
-		if int(month) in range(1, 13) or month == -999:
-			print(f"month {month}")
-			self.__month = month
-		else:
-			raise ValueError('Valor {month} incorreto para o mes')
+		self.__month = fn_check_month(month)
+
 
 	@property
 	def day(self):
@@ -44,11 +38,8 @@ class cls_Date_Struct:
 
 	@day.setter
 	def day(self, day: int) -> int:
-		if int(day) in range(1, 32) or day == -999:
-			print(f"day {day}")
-			self.__day = day
-		else:
-			raise ValueError('Valor {day} incorreto para o dia')
+		self.__day = fn_check_day(year=self.year,month=self.month,day=day)
+
 '''
 	@property
 	def data(self):

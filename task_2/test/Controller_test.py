@@ -6,6 +6,15 @@ path.append(cwd)
 import pytest
 from task_2.cls.Controller import cls_Controller
 
+class Test_Pascoa:
+	def test_pascoa_1(self):
+		obj=cls_Controller()
+		assert obj.mtd_Pascoa(2021) == '2021-04-04'
+	def test_pascoa_2(self):
+		obj=cls_Controller()
+		assert obj.mtd_Pascoa(2020) == '2020-04-12'
+
+'''
 class Test_mtd_Ler_Data:
 	def test_happy(self):
 		res=cls_Controller()
@@ -45,3 +54,4 @@ class Test_mtd_Pascoa:
 	def test_(self):
 		res=cls_Controller()
 		assert res.mtd_Pascoa('2021-1-1')=='2021-04-04'
+'''

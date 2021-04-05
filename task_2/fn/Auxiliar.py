@@ -1,25 +1,31 @@
-	def mtd_Inicializar_Data(self) -> int:
-		print(f'Ano: {self.ano}')
-		print(f'Mes: {self.mes}')
-		print(f'Dia: {self.dia}')
-		data = f'{self.ano:04d}{self.mes:02d}{self.dia:02d}'
-		data = int(data)
-		print(data)
-		return data
+def fn_leap(ano) -> int:
+    ano = ano
+    res = ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0)
+    return int(res)
 
-	def mtd_Acrescentar_Dias(self, value: int):
-		add_mes_dia = fn_date_add(value, self.ano)
-		mes = add_mes_dia[0]
-		dia = add_mes_dia[1]
-		ano = add_mes_dia[2]
-		self.dia = dia
-		self.mes = mes
-		self.ano = ano
+'''
+def mtd_Inicializar_Data(self) -> int:
+	print(f'Ano: {self.ano}')
+	print(f'Mes: {self.mes}')
+	print(f'Dia: {self.dia}')
+	data = f'{self.ano:04d}{self.mes:02d}{self.dia:02d}'
+	data = int(data)
+	print(data)
+	return data
 
-	def mtd_Escrever_Extenso(self):
-		mes_name = fn_mes_int_to_str(self.mes)
-		data_extenso = f'{self.dia} de {mes_name.capitalize()} de {self.ano}'
-		return data_extenso
+def mtd_Acrescentar_Dias(self, value: int):
+	add_mes_dia = fn_date_add(value, self.ano)
+	mes = add_mes_dia[0]
+	dia = add_mes_dia[1]
+	ano = add_mes_dia[2]
+	self.dia = dia
+	self.mes = mes
+	self.ano = ano
+
+def mtd_Escrever_Extenso(self):
+	mes_name = fn_mes_int_to_str(self.mes)
+	data_extenso = f'{self.dia} de {mes_name.capitalize()} de {self.ano}'
+	return data_extenso
 
 def fn_mes_int_to_str(value: int) -> str:
     dct_mes = {
@@ -39,10 +45,7 @@ def fn_mes_int_to_str(value: int) -> str:
     return dct_mes[value]
 
 
-def fn_leap(ano) -> int:
-    ano = ano
-    res = ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0)
-    return int(res)
+
 
 
 def fn_days_in_year(ano: int) -> int:
@@ -63,7 +66,7 @@ def fn_days_passed_in_year(ano, mes, dia):
         days_passed += fn_days_in_month(i, ano)
     days_passed += dia
     return days_passed
-
+'''
 
 '''
 [todo]: Corrigir adiconar data
@@ -71,7 +74,7 @@ Usar dias passado + dias > 0
 se negativo
 se positivo
 '''
-
+'''
 
 def fn_days_to_add(days_to_add: int, year: int, month: int, day: int) -> list:
     days_rest = fn_days_passed_in_year(year, month, day)+days_to_add
@@ -97,3 +100,4 @@ def fn_days_to_add(days_to_add: int, year: int, month: int, day: int) -> list:
 
 
 print(fn_days_to_add(5, 2020, 1, 1))
+'''

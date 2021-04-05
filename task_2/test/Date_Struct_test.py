@@ -8,10 +8,16 @@ import pytest
 
 class Test_cls_init:
 	def test_class_ini(self):
-		res = cls_Date_Struct(1, 2, 1111)
-		assert res.ano == 1111
-		assert res.mes == 2
-		assert res.dia == 1
+		obj = cls_Date_Struct(1, 2, 2020)
+		assert obj.ano == 2020
+		assert obj.mes == 2
+		assert obj.dia == 1
+
+	def test_init_none(self):
+		obj = cls_Date_Struct()
+		assert obj.ano == -999
+		assert obj.mes == -999
+		assert obj.dia == -999
 
 	def test_ano(self):
 		with pytest.raises(ValueError):
@@ -24,6 +30,7 @@ class Test_cls_init:
 	def test_dia(self):
 		with pytest.raises(ValueError):
 			cls_Date_Struct(-1, 2, 2020)
+
 
 
 class Test_mtd_Inicializar_Data:

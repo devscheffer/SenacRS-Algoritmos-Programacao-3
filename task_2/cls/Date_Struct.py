@@ -2,10 +2,11 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.fn.fn_aux import fn_date_add, fn_check_ano, fn_check_mes, fn_check_dia, fn_dias_ano, fn_dias_mes, fn_mes_int_to_str
+# from task_2.fn.fn_aux import fn_date_add
+
 
 class cls_Date_Struct:
-	def __init__(self, dia: int=0, mes: int=0, ano: int=0):
+	def __init__(self, dia: int = -999, mes: int = -999, ano: int = -999):
 		self.ano = ano
 		self.mes = mes
 		self.dia = dia
@@ -15,27 +16,36 @@ class cls_Date_Struct:
 		return self.__ano
 
 	@ano.setter
-	def ano(self, value: int) -> int:
-		ano_new = fn_check_ano(value)
-		self.__ano = ano_new
+	def ano(self, ano: int) -> int:
+		if len(str(ano)) == 4 or ano == -999:
+			print(f"Ano {ano}")
+			self.__ano = ano
+		else:
+			raise ValueError('Valor {ano} incorreto para o ano')
 
 	@property
 	def mes(self):
 		return self.__mes
 
 	@mes.setter
-	def mes(self, value: int) -> int:
-		mes_new = fn_check_mes(value)
-		self.__mes = mes_new
+	def mes(self, mes: int) -> int:
+		if int(mes) in range(1, 13) or mes == -999:
+			print(f"Mes {mes}")
+			self.__mes = mes
+		else:
+			raise ValueError('Valor {mes} incorreto para o mes')
 
 	@property
 	def dia(self):
 		return self.__dia
 
 	@dia.setter
-	def dia(self, value: int) -> int:
-		dia_new = fn_check_dia(value)
-		self.__dia = dia_new
+	def dia(self, dia: int) -> int:
+		if int(dia) in range(1, 32) or dia == -999:
+			print(f"Dia {dia}")
+			self.__dia = dia
+		else:
+			raise ValueError('Valor incorreto para o dia')
 
 	@property
 	def data(self):
@@ -55,17 +65,15 @@ class cls_Date_Struct:
 		return data
 
 	def mtd_Acrescentar_Dias(self, value: int):
-		add_mes_dia = fn_date_add(value,self.ano)
+		add_mes_dia = fn_date_add(value, self.ano)
 		mes = add_mes_dia[0]
-		dia=add_mes_dia[1]
+		dia = add_mes_dia[1]
 		ano = add_mes_dia[2]
 		self.dia = dia
 		self.mes = mes
 		self.ano = ano
 
 	def mtd_Escrever_Extenso(self):
-		mes_name=fn_mes_int_to_str(self.mes)
+		mes_name = fn_mes_int_to_str(self.mes)
 		data_extenso = f'{self.dia} de {mes_name.capitalize()} de {self.ano}'
 		return data_extenso
-
-

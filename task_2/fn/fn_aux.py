@@ -1,4 +1,25 @@
+	def mtd_Inicializar_Data(self) -> int:
+		print(f'Ano: {self.ano}')
+		print(f'Mes: {self.mes}')
+		print(f'Dia: {self.dia}')
+		data = f'{self.ano:04d}{self.mes:02d}{self.dia:02d}'
+		data = int(data)
+		print(data)
+		return data
 
+	def mtd_Acrescentar_Dias(self, value: int):
+		add_mes_dia = fn_date_add(value, self.ano)
+		mes = add_mes_dia[0]
+		dia = add_mes_dia[1]
+		ano = add_mes_dia[2]
+		self.dia = dia
+		self.mes = mes
+		self.ano = ano
+
+	def mtd_Escrever_Extenso(self):
+		mes_name = fn_mes_int_to_str(self.mes)
+		data_extenso = f'{self.dia} de {mes_name.capitalize()} de {self.ano}'
+		return data_extenso
 
 def fn_mes_int_to_str(value: int) -> str:
     dct_mes = {

@@ -6,8 +6,7 @@ from task_2.fn.auxiliar import fn_check_day, fn_check_month, fn_check_year, fn_I
 
 
 class cls_Date_Struct:
-	def __init__(self, year: int = -999, month: int = -999, day: int = -999
-				 ):
+	def __init__(self, year: int = -999, month: int = -999, day: int = -999):
 		self.year = year
 		self.month = month
 		self.day = day

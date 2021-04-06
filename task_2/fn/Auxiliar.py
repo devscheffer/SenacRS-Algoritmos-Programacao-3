@@ -113,15 +113,3 @@ def fn_days_to_add(days_to_add: int, year: int, month: int, day: int) -> list:
 	return [year+add_year, add_month, add_day]
 
 
-'''
-def mtd_Acrescentar_Dias(self, value: int):
-	add_month_dia = fn_date_add(value, self.year)
-	month = add_month_dia[0]
-	dia = add_month_dia[1]
-	year = add_month_dia[2]
-	self.dia = dia
-	self.month = month
-	self.year = year
-
-
-'''

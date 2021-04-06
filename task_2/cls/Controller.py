@@ -7,8 +7,7 @@ from task_2.cls.date_struct import cls_Date_Struct
 
 
 class cls_Controller:
-	def __init__(self, year: int = -999, month: int = -999, day: int = -999, data: str = '9999-01-01'
-				 ):
+	def __init__(self, year: int = -999, month: int = -999, day: int = -999, data: str = '9999-01-01'):
 		self.obj_data = cls_Date_Struct(year, month, day)
 		self.data = data
 
@@ -80,8 +79,7 @@ class cls_Controller:
 			year = self.obj_data.year
 			month = self.obj_data.month
 			day = self.obj_data.day
-			y, m, d = fn_days_to_add(
-				days_to_add=days_to_add, year=year, month=month, day=day)
+			y, m, d = fn_days_to_add(days_to_add=days_to_add, year=year, month=month, day=day)
 			self.data = f'{y}-{m}-{d}'
 			print(self.data)
 			return int(True)

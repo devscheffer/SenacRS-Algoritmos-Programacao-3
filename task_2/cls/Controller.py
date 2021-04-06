@@ -2,21 +2,20 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
+from task_2.fn.auxiliar import fn_check_year, fn_days_to_add, fn_lst_Data, fn_leap, fn_Escrever_Extenso, fn_check_month, fn_check_day
+from task_2.cls.date_struct import cls_Date_Struct
 
-from task_2.cls.Date_Struct import cls_Date_Struct
-from task_2.fn.Auxiliar import fn_check_year
+
 class cls_Controller:
-	def __init__(self
-	, year: int = -999
-	, month: int = -999
-	, day: int = -999
-	):
-		self.obj_data=cls_Date_Struct(year,month,day)
+	def __init__(self, year: int = -999, month: int = -999, day: int = -999, data: str = '9999-01-01'
+				 ):
+		self.obj_data = cls_Date_Struct(year, month, day)
+		self.data = data
 
-	def mtd_Pascoa(self,year:int)->str:
-		year=str(year).split('-')[0]
-		year=int(year)
-		year=fn_check_year(year)
+	def mtd_Pascoa(self, year: int) -> str:
+		year = str(year).split('-')[0]
+		year = int(year)
+		year = fn_check_year(year)
 		g = year % 19
 		e = 0
 		c = year//100
@@ -28,13 +27,63 @@ class cls_Controller:
 		m = 3 + (p + 26)//30
 		return (f'{int(year)}-{int(m):02d}-{int(d):02d}')
 
-	def mtd_Ler_Data(self,yyyy_mm_dd:str)->None:
-		lst_data=yyyy_mm_dd.split(sep='-')
-		lst_data=list(map(int,lst_data))
-		self.obj_data.year=lst_data[0]
-		self.obj_data.month=lst_data[1]
-		self.obj_data.day=lst_data[2]
+	@property
+	def data(self):
+		return self.__data
 
-	def mtd_Verificar_Bissexto(self)->int:
-		return fn_leap(self.year)
+	@data.setter
+	def data(self, data: str) -> None:
+		dict_data = fn_lst_Data(data)
+		self.obj_data.year = dict_data['year']
+		self.obj_data.month = dict_data['month']
+		self.obj_data.day = dict_data['day']
 
+	def mtd_Ler_Data(self, data: str) -> None:
+		try:
+			self.data = data
+		except:
+			raise ValueError('Data incorreta \nUtilizar o padrão yyyy-mm-dd')
+
+	def __mtd_data_input(self, data: str) -> dict:
+		dict_data = fn_lst_Data(data)
+		year = dict_data['year']
+		month = dict_data['month']
+		day = dict_data['day']
+		fn_check_year(year=year)
+		fn_check_month(month=month)
+		fn_check_day(year=year, month=month, day=day)
+		return dict_data
+
+	def mtd_Validar_Data(self, data: str) -> int:
+		try:
+			self.__mtd_data_input(data=data)
+			return int(True)
+		except:
+			return int(False)
+
+	def mtd_Verificar_Bissexto(self) -> bool:
+		return fn_leap(self.obj_data.year)
+
+	def mtd_Escrever_Extenso(self, data: str) -> bool:
+		try:
+			dict_data = self.__mtd_data_input(data=data)
+			year = dict_data['year']
+			month = dict_data['month']
+			day = dict_data['day']
+			fn_Escrever_Extenso(year=year, month=month, day=day)
+			return int(True)
+		except:
+			return int(False)
+
+	def mtd_Days_to_Add(self, days_to_add: int) -> bool:
+		try:
+			year = self.obj_data.year
+			month = self.obj_data.month
+			day = self.obj_data.day
+			y, m, d = fn_days_to_add(
+				days_to_add=days_to_add, year=year, month=month, day=day)
+			self.data = f'{y}-{m}-{d}'
+			print(self.data)
+			return int(True)
+		except:
+			return int(False)

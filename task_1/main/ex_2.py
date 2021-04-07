@@ -13,7 +13,7 @@ Após, crie uma classe “TestaContaCorrente” onde:
 	- saque (verificando se o cliente possui as condições necessárias)
 	- depositar
 	- consultar saldo
-[warning] não foi definida a regra
+# warning não foi definida a regra
 	- verificar o uso do cheque especial (ou não)
 """
 

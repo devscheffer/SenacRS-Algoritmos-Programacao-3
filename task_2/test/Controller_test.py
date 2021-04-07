@@ -2,7 +2,7 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.cls.controller import cls_Controller
+from Task_2.Class.controller import cls_Controller
 import pytest
 
 

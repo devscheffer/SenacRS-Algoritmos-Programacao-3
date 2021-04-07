@@ -2,7 +2,7 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.fn.auxiliar import fn_days_passed_in_year, fn_days_to_add, fn_leap, fn_days_in_month, fn_Inicializar_Data, fn_Escrever_Extenso, fn_days_in_year
+from Task_2.Function.auxiliar import fn_days_passed_in_year, fn_days_to_add, fn_leap, fn_days_in_month, fn_Inicializar_Data, fn_Escrever_Extenso, fn_days_in_year
 
 
 class Test_fn_leap:

@@ -2,7 +2,7 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.fn.auxiliar import fn_check_day, fn_check_month, fn_check_year, fn_Inicializar_Data
+from Task_2.Function.auxiliar import fn_check_day, fn_check_month, fn_check_year, fn_Inicializar_Data
 
 
 class cls_Date_Struct:

@@ -2,8 +2,8 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from task_2.fn.auxiliar import fn_check_year, fn_days_to_add, fn_lst_Data, fn_leap, fn_Escrever_Extenso, fn_check_month, fn_check_day
-from task_2.cls.date_struct import cls_Date_Struct
+from Task_2.Function.auxiliar import fn_check_year, fn_days_to_add, fn_lst_Data, fn_leap, fn_Escrever_Extenso, fn_check_month, fn_check_day
+from Task_2.Class.date_struct import cls_Date_Struct
 
 
 class cls_Controller:

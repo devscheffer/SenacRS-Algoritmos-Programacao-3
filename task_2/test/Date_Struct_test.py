@@ -3,7 +3,7 @@ from sys import path
 cwd = getcwd()
 path.append(cwd)
 import pytest
-from task_2.cls.date_struct import cls_Date_Struct
+from Task_2.Class.date_struct import cls_Date_Struct
 
 
 class Test_cls_init:

@@ -1,5 +1,5 @@
 import pytest
-from task_1.main.ex_6 import cls_CD
+from Task_1.main.ex_6 import cls_CD
 
 @pytest.fixture
 def obj():

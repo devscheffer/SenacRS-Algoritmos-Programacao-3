@@ -1,4 +1,4 @@
-from task_1.main.ex_5 import cls_Quadrado
+from Task_1.main.ex_5 import cls_Quadrado
 
 def test_area():
 	a=1

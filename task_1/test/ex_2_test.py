@@ -1,4 +1,4 @@
-from task_1.main.ex_2 import cls_Conta_Corrente, cls_Testa_Conta_Corrente
+from Task_1.main.ex_2 import cls_Conta_Corrente, cls_Testa_Conta_Corrente
 
 def test_cls():
 	res = cls_Testa_Conta_Corrente(cls_Conta_Corrente(1, 10, "especial", 200))

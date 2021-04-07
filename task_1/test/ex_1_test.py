@@ -1,4 +1,4 @@
-from task_1.main.ex_1 import cls_Lampada, cls_Testa_Lampada
+from Task_1.main.ex_1 import cls_Lampada, cls_Testa_Lampada
 
 def test_cls():
     res = cls_Testa_Lampada(cls_Lampada("teste", "big"))

@@ -1,4 +1,4 @@
-from task_1.main.ex_3 import cls_Aluno
+from Task_1.main.ex_3 import cls_Aluno
 
 
 def test_reprovado():

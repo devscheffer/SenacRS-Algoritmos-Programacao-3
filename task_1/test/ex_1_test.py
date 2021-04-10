@@ -1,3 +1,7 @@
+from os import getcwd
+from sys import path
+cwd = getcwd()
+path.append(cwd)
 from Task_1.main.ex_1 import cls_Lampada, cls_Testa_Lampada
 
 def test_cls():

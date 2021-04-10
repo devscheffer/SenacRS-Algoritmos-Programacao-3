@@ -1,3 +1,8 @@
+
+from os import getcwd
+from sys import path
+cwd = getcwd()
+path.append(cwd)
 from Task_1.main.ex_5 import cls_Quadrado
 
 def test_area():

@@ -1,3 +1,8 @@
+
+from os import getcwd
+from sys import path
+cwd = getcwd()
+path.append(cwd)
 import pytest
 from Task_1.main.ex_6 import cls_CD
 

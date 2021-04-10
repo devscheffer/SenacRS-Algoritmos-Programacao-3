@@ -2,7 +2,7 @@
 	"python.linting.flake8Enabled": false,
 	"python.linting.enabled": true,
 	"python.testing.pytestArgs": [
-		"task_2"
+		"."
 	],
 	"python.testing.unittestEnabled": false,
 	"python.testing.nosetestsEnabled": false,

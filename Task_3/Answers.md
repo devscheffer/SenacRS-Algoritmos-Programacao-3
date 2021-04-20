@@ -8,23 +8,23 @@
 
 Diferencie Stack e Heap
 
--   Escopo de variáveis
+- Escopo de variáveis
     **Stack**: local. Variáveis são acessíveis apenas pela função responsável pela stack.
     **Heap**: global. Variáveis são acessadas por qualquer função, já que seu dado possui uma referência para o endereço de memória.
--   Alocação estática e dinâmica
+- Alocação estática e dinâmica
     **Stack**: alocação estática.
     **Heap**: alocação dinâmica.
--   Gerenciamento de memória
+- Gerenciamento de memória
     **Stack**: não fragmenta a memória.
     **Heap**: gera fragmentação da memória.
 
 # Questão 3
 
--   Tipos de dados primitivos
+- Tipos de dados primitivos
     Estrutura de dados que não podem ser decompostas em estruturas menores
--   Tipos de dados estruturados
+- Tipos de dados estruturados
     Ao contrário dos dados primitivos, essa estrutura pode ser decomposta em estruturas menores
--   Tipos de dados abstratos
+- Tipos de dados abstratos
     Conjunto de dados e operações que podem ser aplicadas a uma estrutura de dados, ou seja, TAD é uma estrutura de dado do tipo (valores, operações)
 
 # Questão 4
@@ -90,37 +90,37 @@ class Ingrediente:
 		self.medida=medida
 ```
 
--   Metodo: change_nome
+- Metodo: change_nome
 
     Entrada: novo_nome(str)
     Saida: novo_nome(str)
     Objetivo: método recebe novo_nome e muda o valor self.nome para novo_nome, retornando o novo valor. Caso não seja possível, não ocorre a mudança de nome e retorna uma mensagem de erro.
 
--   Metodo: change_quantidade
+- Metodo: change_quantidade
 
     Entrada: novo_quantidade(float)
     Saida: novo_quantidade(float)
     Objetivo: método recebe novo_quantidade e muda self.quantidade para o novo_quantidade, retornando o novo valor. Caso o novo_quantidade seja menor que zero, não ocorre a mudança de valor e retorna uma mensagem de erro.
 
--   Metodo: change_medida
+- Metodo: change_medida
 
     Entrada: novo_medida(str)
     Saida: novo_medida(str)
     Objetivo: método recebe novo_medida e muda self.medida para o novo_medida, retornando o novo valor. Caso o novo_medida não esteja dentro da lista_medida, não ocorre a mudança de medida e retorna uma mensagem de erro.
 
--   Metodo: lista medida
+- Metodo: lista medida
 
     Entrada:
     Saida: lista_medidas(list)
     Objetivo: método retorna todos os possíveis nomes de medidas.
 
--   Metodo: fator_conversao
+- Metodo: fator_conversao
 
     Entrada: medida_old(str),medida_new(str)
     Saida: fator(float)
     Objetivo: método recebe medida_old,medida_new e retorna o valor de conversão da medida_old para o medida_new. Caso qualquer uma das entradas não esteja na lista de medidas, retornar mensagem de erro.
 
--   Metodo: adiciona quantidade
+- Metodo: adiciona quantidade
 
     Entrada: qtd(float),medida(str)
     Saida: novo_qtd(str)
@@ -136,14 +136,22 @@ class Ingrediente:
 8.2.1. O objeto linkedlist é criado, depois utilizamos o método addNode para criar nós que irão guardar informação, esses nós serão ligados uns aos outros como uma espécie de fila, onde cada nó só saberá da existência do próximo nó, se houver. A adição de nós pode ocorrer de 3 maneiras:
 
 - nó no inicio da fila (index=0)
-Novo nó se torna o primeiro nó
+    Novo nó se torna o primeiro nó
 - nó no meio da fila (0<index<len_lista)
-Novo nó vai para a posição do index dado
+    Novo nó vai para a posição do index dado
 - nó no fim da fila (index>=len_lista)
-Novo nó vai para o fim da fila
+    Novo nó vai para o fim da fila
 
 ![Representação](./Picture1.png)
 
 # Questão 9
 
+Respostas se encontram em
+desc|path
+--|--
+original|Task_3\Lista_Encadeada_simples\v1
+melhorias|Task_3\Lista_Encadeada_simples\v2
+
 # Questão 10
+
+Respostas em Task_3\Lista_Encadeada_simples\q10

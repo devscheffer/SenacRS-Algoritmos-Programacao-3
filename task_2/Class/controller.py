@@ -9,7 +9,7 @@ from Task_2.Class.date_struct import cls_Date_Struct
 class cls_Controller:
 	def __init__(self, year: int = -999, month: int = -999, day: int = -999, data: str = '9999-01-01'):
 		self.obj_data = cls_Date_Struct(year, month, day)
-		self.data = data
+		self.__data = data
 
 	def mtd_Pascoa(self, year: int) -> str:
 		year = str(year).split('-')[0]
@@ -36,6 +36,7 @@ class cls_Controller:
 		self.obj_data.year = dict_data['year']
 		self.obj_data.month = dict_data['month']
 		self.obj_data.day = dict_data['day']
+		self.__data=data
 
 	def mtd_Ler_Data(self, data: str) -> None:
 		try:

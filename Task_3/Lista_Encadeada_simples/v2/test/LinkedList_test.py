@@ -2,7 +2,7 @@ from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
-from Task_3.ListasSimplesmenteEncadeadas.v2.LinkedList import LinkedList
+from Task_3.Lista_Encadeada_simples.v2.LinkedList import LinkedList
 import pytest
 class Test_linkedList:
 

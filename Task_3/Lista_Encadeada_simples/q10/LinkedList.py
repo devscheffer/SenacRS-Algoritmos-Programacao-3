@@ -1,9 +1,9 @@
-from Task_3.Lista_Encadeada_simples.v2.No import Node
 from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
 
+from Task_3.Lista_Encadeada_simples.q10.No import Node
 
 class LinkedList:
 	def __init__(self):
@@ -188,6 +188,6 @@ class LinkedList:
 			res.append(currentNode)
 			print(currentNode.label, end="->")
 			currentNode = currentNode.next
-		return list(map(lambda x: x.label, res))
+		return list(map(lambda x: x.label.data, res))
 
 

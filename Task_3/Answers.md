@@ -9,22 +9,33 @@
 Diferencie Stack e Heap
 
 - Escopo de variáveis
+
     **Stack**: local. Variáveis são acessíveis apenas pela função responsável pela stack.
-    **Heap**: global. Variáveis são acessadas por qualquer função, já que seu dado possui uma referência para o endereço de memória.
+
+	**Heap**: global. Variáveis são acessadas por qualquer função, já que seu dado possui uma referência para o endereço de memória.
+
 - Alocação estática e dinâmica
+
     **Stack**: alocação estática.
-    **Heap**: alocação dinâmica.
+
+	**Heap**: alocação dinâmica.
+
 - Gerenciamento de memória
+
     **Stack**: não fragmenta a memória.
-    **Heap**: gera fragmentação da memória.
+
+	**Heap**: gera fragmentação da memória.
 
 # Questão 3
 
 - Tipos de dados primitivos
+
     Estrutura de dados que não podem ser decompostas em estruturas menores
 - Tipos de dados estruturados
+
     Ao contrário dos dados primitivos, essa estrutura pode ser decomposta em estruturas menores
 - Tipos de dados abstratos
+
     Conjunto de dados e operações que podem ser aplicadas a uma estrutura de dados, ou seja, TAD é uma estrutura de dado do tipo (valores, operações)
 
 # Questão 4
@@ -90,41 +101,53 @@ class Ingrediente:
 		self.medida=medida
 ```
 
-- Metodo: change_nome
+- Metodo: **change_nome**
 
     Entrada: novo_nome(str)
-    Saida: novo_nome(str)
-    Objetivo: método recebe novo_nome e muda o valor self.nome para novo_nome, retornando o novo valor. Caso não seja possível, não ocorre a mudança de nome e retorna uma mensagem de erro.
 
-- Metodo: change_quantidade
+	Saida: novo_nome(str)
+
+	Objetivo: método recebe novo_nome e muda o valor self.nome para novo_nome, retornando o novo valor. Caso não seja possível, não ocorre a mudança de nome e retorna uma mensagem de erro.
+
+- Metodo: **change_quantidade**
 
     Entrada: novo_quantidade(float)
-    Saida: novo_quantidade(float)
-    Objetivo: método recebe novo_quantidade e muda self.quantidade para o novo_quantidade, retornando o novo valor. Caso o novo_quantidade seja menor que zero, não ocorre a mudança de valor e retorna uma mensagem de erro.
 
-- Metodo: change_medida
+	Saida: novo_quantidade(float)
+
+	Objetivo: método recebe novo_quantidade e muda self.quantidade para o novo_quantidade, retornando o novo valor. Caso o novo_quantidade seja menor que zero, não ocorre a mudança de valor e retorna uma mensagem de erro.
+
+- Metodo: **change_medida**
 
     Entrada: novo_medida(str)
-    Saida: novo_medida(str)
-    Objetivo: método recebe novo_medida e muda self.medida para o novo_medida, retornando o novo valor. Caso o novo_medida não esteja dentro da lista_medida, não ocorre a mudança de medida e retorna uma mensagem de erro.
 
-- Metodo: lista medida
+	Saida: novo_medida(str)
+
+	Objetivo: método recebe novo_medida e muda self.medida para o novo_medida, retornando o novo valor. Caso o novo_medida não esteja dentro da lista_medida, não ocorre a mudança de medida e retorna uma mensagem de erro.
+
+- Metodo: **lista_medida**
 
     Entrada:
-    Saida: lista_medidas(list)
-    Objetivo: método retorna todos os possíveis nomes de medidas.
 
-- Metodo: fator_conversao
+	Saida: lista_medidas(list)
+
+	Objetivo: método retorna todos os possíveis nomes de medidas.
+
+- Metodo: **fator_conversao**
 
     Entrada: medida_old(str),medida_new(str)
-    Saida: fator(float)
-    Objetivo: método recebe medida_old,medida_new e retorna o valor de conversão da medida_old para o medida_new. Caso qualquer uma das entradas não esteja na lista de medidas, retornar mensagem de erro.
 
-- Metodo: adiciona quantidade
+	Saida: fator(float)
+
+	Objetivo: método recebe medida_old,medida_new e retorna o valor de conversão da medida_old para o medida_new. Caso qualquer uma das entradas não esteja na lista de medidas, retornar mensagem de erro.
+
+- Metodo: **add_quantidade**
 
     Entrada: qtd(float),medida(str)
-    Saida: novo_qtd(str)
-    Objetivo: método recebe um valor, positivo ou negativo, para a quantidade e uma medida. Caso a medida seja diferente da self.medida ele converte a quantidade multiplicando pelo fator do método fator_conversao(self.medida,medida) e o resultado será adicionado ao valor self.quantidade retornando o resultado dessa soma concatenado ao self.medida.
+
+	Saida: novo_qtd(str)
+
+	Objetivo: método recebe um valor, positivo ou negativo, para a quantidade e uma medida. Caso a medida seja diferente da self.medida ele converte a quantidade multiplicando pelo fator do método fator_conversao(self.medida,medida) e o resultado será adicionado ao valor self.quantidade retornando o resultado dessa soma concatenado ao self.medida.
     Caso o valor de entrada seja negativo e a soma com o valor original de negativo, ou a medida não esteja dentro da lista de medidas retorna uma mensagem de erro e não adiciona o valor de entrada ao valor da quantidade original.
 
 # Questão 8

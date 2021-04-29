@@ -168,18 +168,28 @@ class LinkedList:
 		index = self.__check_index(index)
 		if self.len_list < 2:
 			self.__Node_remove_len_lt_2()
+		elif index == 0:
+			currentNode=self.first
+			self.first=currentNode.next
+			del currentNode
 		else:
 			currentNode, previousNode = self.__find_node_by_index(index)
 			previousNode.next = currentNode.next
 			del currentNode
+			self.__len_list -= 1
 
 	def Node_remove_by_label(self, label):
 		if self.len_list < 2:
 			self.__Node_remove_len_lt_2()
+		elif self.first.label == label:
+			currentNode=self.first
+			self.first=currentNode.next
+			del currentNode
 		else:
 			currentNode, previousNode = self.__find_node_by_label(label)
 			previousNode.next = currentNode.next
 			del currentNode
+			self.__len_list -= 1
 
 	def viewList(self):
 		res = []

@@ -16,10 +16,19 @@ class Test_linkedList:
 		with pytest.raises(ValueError):
 			lista.Node_add('Eduarda', -1)
 
-	def test_many(self):
+	def test_add(self):
 		lista = LinkedList()
 		lista.Node_add('2021-02-05', 0)
 		lista.Node_add('2021-03-05', 1)
 		lista.Node_add('2021-04-05', 2)
 		lista.Node_add('2021-05-05', 5)
 		assert lista.viewList() == ['2021-02-05','2021-03-05','2021-04-05','2021-05-05']
+
+	def test_sub(self):
+		lista = LinkedList()
+		lista.Node_add('2021-02-05', 0)
+		lista.Node_add('2021-03-05', 1)
+		lista.Node_add('2021-04-05', 2)
+		lista.Node_add('2021-05-05', 5)
+		lista.Node_remove_by_index(0)
+		assert lista.viewList() == ['2021-03-05','2021-04-05','2021-05-05']

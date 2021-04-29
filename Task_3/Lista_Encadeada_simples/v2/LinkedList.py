@@ -1,8 +1,8 @@
-from Task_3.Lista_Encadeada_simples.v2.No import Node
 from os import getcwd
 from sys import path
 cwd = getcwd()
 path.append(cwd)
+from Task_3.Lista_Encadeada_simples.v2.No import Node
 
 
 class LinkedList:
@@ -172,6 +172,7 @@ class LinkedList:
 			currentNode, previousNode = self.__find_node_by_index(index)
 			previousNode.next = currentNode.next
 			del currentNode
+		self.__len_list -= 1
 
 	def Node_remove_by_label(self, label):
 		if self.len_list < 2:
@@ -180,6 +181,7 @@ class LinkedList:
 			currentNode, previousNode = self.__find_node_by_label(label)
 			previousNode.next = currentNode.next
 			del currentNode
+		self.__len_list -= 1
 
 	def viewList(self):
 		res = []

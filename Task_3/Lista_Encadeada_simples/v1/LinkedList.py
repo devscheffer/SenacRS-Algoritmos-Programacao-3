@@ -1,4 +1,8 @@
-from No import Node
+from os import getcwd
+from sys import path
+cwd = getcwd()
+path.append(cwd)
+from Task_3.Lista_Encadeada_simples.v1.No import Node
 
 class LinkedList:
     def __init__(self):
@@ -8,7 +12,7 @@ class LinkedList:
 
     #metodo para inserir nodos / informacoes da lista
     def addNode(self, label, index):
-        #precisamos criar um novo no 
+        #precisamos criar um novo no
         if (index >= 0 ):  #nao pode ter indice negativo
             #criando novo no
             node = Node(label)  # node eh o no que eu estou criando
@@ -21,7 +25,7 @@ class LinkedList:
             # 1 - se nao esta vazia, entao insercao no INICIO
             if (index == 0):
                 #inserindo no inicio
-                node.setNext(self.first) # o prox do no que esta sendo criado e o primeiro 
+                node.setNext(self.first) # o prox do no que esta sendo criado e o primeiro
                 #pronto, no criado -- precisamos dizer que ele é o primeiro
                 self.first = node
                 print(node.getLabel())
@@ -39,14 +43,14 @@ class LinkedList:
                 #informacoes guardadas, agora eu tenho o no anterior e o no atual
                 #agora posso percorrer para inserir sem quebrar o encadeamento
                 while(currentNode != None):
-                    
+
                     #se estamos no lugar procurado, se o indice que estamos eh o indice onde queremos inserir
                     if (currentIndex == index): #encontramos o indice, o lugar onde queremos inserir
-                        #seta o nodo corrente, como o proximo do no que estamos inserindo 
+                        #seta o nodo corrente, como o proximo do no que estamos inserindo
                         node.setNext(currentNode)
                         #seta o node como proximo do anterior - ligando a lista novamente
                         previousNode.setNext(node)
-                        
+
 
                     #continuar percorrendo ate achar, andando na lista
                     previousNode = currentNode

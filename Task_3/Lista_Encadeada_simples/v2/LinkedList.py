@@ -31,6 +31,9 @@ class LinkedList:
 	@property
 	def len_list(self):
 		return self.__len_list
+	@len_list.setter
+	def len_list(self,len_list):
+		self.__len_list = len_list
 
 # ========== private methods ==========
 
@@ -119,9 +122,8 @@ class LinkedList:
 		if self.len_list == 0:
 			raise IndexError('Lista não possui node para remover')
 		elif self.len_list == 1:
-			self.first == None
-			self.last == None
-			self.len_list == 0
+			self.first = None
+			self.last = None
 
 # ========== public method ==========
 
@@ -198,6 +200,7 @@ class LinkedList:
 			res.append(currentNode)
 			print(currentNode.label, end="->")
 			currentNode = currentNode.next
+		print()
 		return list(map(lambda x: x.label, res))
 
 

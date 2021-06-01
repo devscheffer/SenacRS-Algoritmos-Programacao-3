@@ -10,7 +10,7 @@ def run_sorting_algorithm(algorithm, array):
 	# Execute the code ten different times and return the time
 	# in seconds that each execution took
 	# times = repeat(setup=setup_code,stmt=stmt, repeat=3, number=10)
-	times = repeat(setup=setup_code,stmt=stmt, repeat=3, number=10)
+	times = repeat(setup=setup_code,stmt=stmt, repeat=3, number=1)
 	# Finally, display the name of the algorithm and the
 	# minimum time it took to run
 	result=f"Algorithm: {algorithm}. Minimum execution time: {min(times)}"

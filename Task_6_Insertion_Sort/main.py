@@ -21,13 +21,20 @@ def sample_array(file_name):
 	return array
 
 def algorithm_test(sort_type,sample):
+	print('Gerando array')
 	array = sample_array(sample)
+	print('array gerado')
+	print('Testando algoritmo')
 	min_times=run_sorting_algorithm(sort_type,array)
 	res = f'{sort_type},{sample},{min_times}'
+	print('Teste finalizado')
 	print(res)
+	print('Comecando escrita')
 	with open(file='./Task_6_Insertion_Sort/output.txt',mode='a') as output:
 		output.write(f'{res}\n')
+	print('Escrita finalizada')
 
 for i in lst_sample:
 	for j in lst_sorts:
+		print(f'Start: {j} - {i}')
 		algorithm_test(sort_type=j,sample=i)

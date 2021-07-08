@@ -1,7 +1,9 @@
 # Algoritmo de Huffman
-## Etapa 1
-Dicionário de frequência
-Dicionário de lista de mesma frequência
-## Etapa 2
-Criacao de arvore binaria
+
+- [x] Dicionário de frequência
+- [x] Dicionário de lista de mesma frequência
+- [x] Criação de arvore binaria
+- [x] Dicionário dos path para cada leaf
+- [x] Conversão da lista path para string
+- [x] Função do cálculo da compressão
 

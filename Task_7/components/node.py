@@ -1,8 +1,3 @@
-# Create node for a binary tree
-from dataclasses import dataclass
-
-
-@dataclass()
 class cls_node:
 	def __init__(self, data: int):
 		self.data = data
@@ -24,18 +19,18 @@ class cls_node:
 			self.right = new_node
 
 
-	def dct_leaf_path_Preorder(self,path=[],dct_res={}):
+	def mtd_dct_leaf_path_Preorder(self,path=[],dct_res={}):
 		if self.left is None and self.right is None:
 			dct_res[self.data]=path.copy()
 			return dct_res
 		else:
 			if self.left is not None:
 				path.append(0)
-				self.left.dct_leaf_path_Preorder(path,dct_res)
+				self.left.mtd_dct_leaf_path_Preorder(path,dct_res)
 				path.pop()
 			if self.right is not None:
 				path.append(1)
-				self.right.dct_leaf_path_Preorder(path,dct_res)
+				self.right.mtd_dct_leaf_path_Preorder(path,dct_res)
 				path.pop()
 		return dct_res
 

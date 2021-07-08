@@ -102,12 +102,11 @@ class cls_huffman_algorithm:
         return dct_aux_v2
 
     def mtd_string_to_binary_normal(self) -> dict:
-        c = []
-        for i in bytes(self.text, "ascii"):
-            a = f"{i:08b}"
-            c.append(a)
-        binary = "".join(c)
-        res = {"binary": binary, "size": len(str(binary))}
+        lst_binary = []
+        for i in bytes(self.text, "UTF-8"):
+            lst_binary.append(f"{i:08b}")
+        binary = "".join(lst_binary)
+        res = {"binary": binary, "size": len(str(binary)), "binary_lst": lst_binary}
         return res
 
     def mtd_string_to_binary_huffman(self) -> dict:

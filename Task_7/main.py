@@ -7,7 +7,7 @@ from Task_7.components.file_read import cls_read_file
 from Task_7.components.huffman_algorithm import cls_huffman_algorithm
 
 
-file_name = 'test.txt'
+file_name = 'entrada.txt'
 
 print('read file')
 file_text=cls_read_file(file_name)

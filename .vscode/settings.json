@@ -15,5 +15,6 @@
 		"*_test.py"
 	],
 	"python.linting.banditEnabled": true,
-	"python.linting.pylamaEnabled": false
+	"python.linting.pylamaEnabled": false,
+	"python.linting.pycodestyleEnabled": false
 }

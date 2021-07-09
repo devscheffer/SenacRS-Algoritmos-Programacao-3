@@ -50,7 +50,9 @@ class Test_dict_frequency:
         }
 
     def test_leaf_path(self):
-        t3 = cls_huffman_algorithm("aaaaaaaaaaeeeeeeeeeeeeeeeiiiiiiiiiiiiooouuuussssssssssssst")
+        t3 = cls_huffman_algorithm(
+            "aaaaaaaaaaeeeeeeeeeeeeeeeiiiiiiiiiiiiooouuuussssssssssssst"
+        )
         root_node = t3.mtd_create_huffman_binary_tree()
         bt = root_node
         assert bt.mtd_dct_leaf_path_Preorder() == {

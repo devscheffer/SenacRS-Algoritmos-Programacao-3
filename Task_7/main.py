@@ -1,34 +1,20 @@
-from os import getcwd
+from os import getcwd, listdir
 from sys import path
-
+import time
 cwd = getcwd()
 path.append(cwd)
-from Task_7.components.file_read import cls_read_file
-from Task_7.components.huffman_algorithm import cls_huffman_algorithm
+from Task_7.components.file_read import cls_report
 
 
-file_name = 'entrada.txt'
+path_input = "Task_7/data/input"
+lst_file_input = list(map(lambda x: x.split(".")[0], listdir(path_input)))
+print(lst_file_input)
 
-print('read file')
-file_text=cls_read_file(file_name)
-string = file_text.read_file()
-print(string)
+lst_file = ["test"]
 
-res = cls_huffman_algorithm(string)
-
-print('frequencia:')
-table_freq = res.mtd_create_frequency_table()
-print(table_freq)
-print()
-
-print('Binary path:')
-table_binary = res.mtd_create_binary_table()
-print(table_binary)
-print()
-
-print('Compressao:')
-comprassion = res.mtd_compression()
-print(res.mtd_string_to_binary_normal())
-print(res.mtd_string_to_binary_huffman())
-print(comprassion)
-print()
+for file_name in lst_file_input:
+    start_time = time.time()
+    file_text = cls_report(file_name, path_rel_input=path_input)
+    file_text.mtd_create_report()
+    end_time = time.time()
+    print(f'{file_name}: {end_time-start_time} s')

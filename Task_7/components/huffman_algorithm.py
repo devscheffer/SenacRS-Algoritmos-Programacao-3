@@ -8,15 +8,15 @@ from Task_7.components.node import cls_node
 
 class cls_huffman_algorithm:
     # --> Contructor
-    def __init__(self, inpt_text: str) -> None:
+    def __init__(self, inpt_text: str):
         self.__text = inpt_text
 
     @property
-    def text(self) -> str:
+    def text(self):
         return self.__text
 
     @text.setter
-    def text(self, text: str) -> None:
+    def text(self, text: str):
         self.__text = text
 
     # --> Method Private
@@ -41,7 +41,7 @@ class cls_huffman_algorithm:
         binary_tree = cls_node(total)
         for i in range(len(pair)):
             element = pair.pop(0)
-            binary_tree.insert(element)
+            binary_tree.mtd_insert(element)
         return binary_tree
 
     def __create_pair(self, dct_aux: dict) -> tuple:

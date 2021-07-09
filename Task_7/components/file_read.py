@@ -1,12 +1,12 @@
-from os import getcwd
+import os
 import os.path
 from sys import path
 
-cwd = getcwd()
+cwd = os.getcwd()
 path.append(cwd)
 from Task_7.components.huffman_algorithm import cls_huffman_algorithm
 import json
-
+import time
 
 class cls_report:
     def __init__(
@@ -14,11 +14,11 @@ class cls_report:
         file_name,
         path_rel_input="Task_7/data/input",
         path_rel_output="Task_7/data/output",
-        extension="txt",
+        extension="txt"
     ):
         self.__file_name = file_name
-        self.__path_input = f"{getcwd()}/{path_rel_input}"
-        self.__path_output = f"{getcwd()}/{path_rel_output}"
+        self.__path_input = f"{os.getcwd()}/{path_rel_input}"
+        self.__path_output = f"{os.getcwd()}/{path_rel_output}"
         self.__extension = extension
 
     @property
@@ -44,7 +44,7 @@ class cls_report:
     def mtd_read_file(self) -> str:
         try:
             with open(
-                f"{self.path_input}/{self.file_name}.{self.extension}", mode="r"
+                f"{self.path_input}/{self.file_name}.{self.extension}", mode="r",encoding="utf-8"
             ) as file:
                 f = file.readlines()
                 return "".join(f)
@@ -63,7 +63,7 @@ class cls_report:
         with open(f"{directory}/{report_name}.json", mode="w") as file:
             json.dump(report_data, file, ensure_ascii=False)
 
-    def mtd_create_report(self) -> None:
+    def mtd_create_report_file(self) -> None:
         report = self.report_data
         dct_report = {
             "1_table_frequency": report.mtd_create_frequency_table(),
@@ -85,3 +85,15 @@ class cls_report:
             report_name = i
             report_data = dct_report[i]
             self.__mtd_create_report_json(directory, report_name, report_data)
+
+    def mtd_insert_execution_time_in_report(self,duration:float):
+        directory = self.mtd_create_directory()
+        report_name = '4_1_binary_string'
+        with open(f'{directory}/{report_name}.json',mode='r') as file:
+            report_data=json.load(file)
+            key_new={"Execution_time(s)": round(duration,2)}
+            report_data.update(key_new)
+        self.__mtd_create_report_json(directory, report_name, report_data)
+        return key_new
+
+

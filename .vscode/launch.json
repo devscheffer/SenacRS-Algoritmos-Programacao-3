@@ -10,6 +10,13 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Task 7",
+            "type": "python",
+            "request": "launch",
+            "program": "C:/Users/Lenovo/Desktop/Cloud/[gdrive] aca/SENAC/2021.S01/1 - WED - Algoritmos e Programacao 3/4.GIT/Task_7/main.py",
+            "console": "integratedTerminal"
         }
     ]
 }

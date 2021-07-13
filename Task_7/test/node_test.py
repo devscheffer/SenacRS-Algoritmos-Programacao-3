@@ -3,7 +3,7 @@ from sys import path
 
 cwd = getcwd()
 path.append(cwd)
-from Task_7.components.node import cls_node
+from Task_7.src.create_node import cls_node
 
 
 class Test_binary_tree:

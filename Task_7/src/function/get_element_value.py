@@ -1,7 +1,11 @@
-def fn_get_element_value(element) -> int:
+from Task_7.src.create_node import cls_node
+
+
+def fn_get_element_value(element):
 	if isinstance(element, dict):
-		element_value = element['frequency']
+		return element['frequency']
+	if isinstance(element, cls_node):
+		return element.data
 	else:
-		element_value = element.data
-	return element_value
+		raise Exception('The element is not a dictionary or a node.')
 

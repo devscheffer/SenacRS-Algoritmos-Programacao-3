@@ -4,15 +4,16 @@ class cls_node:
 		self.left = None
 		self.right = None
 
-	def __get_element_value(self, element):
+	def __get_node(self, element):
 		if isinstance(element, cls_node):
-			element_value = element
+			return element
+		if isinstance(element, dict):
+			return cls_node(element)
 		else:
-			element_value = cls_node(element)
-		return element_value
+			raise Exception('element is not cls_node or dict')
 
 	def mtd_insert(self, data)-> None:
-		new_node = self.__get_element_value(data)
+		new_node = self.__get_node(data)
 		if self.left is None:
 			self.left = new_node
 		else:

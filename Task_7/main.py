@@ -15,7 +15,7 @@ report = cls_process_list(
 	path_input      = path_input
 	, path_output      = path_output
 	, lst_file_manual = lst_file_manual
-	, execution       = 'auto'
+	, execution       = 'manual'
 	)
 print(report.lst_file_auto)
 report.mtd_start_process()
